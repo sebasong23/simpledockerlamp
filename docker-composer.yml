@@ -1,0 +1,40 @@
+version: '3.7'
+services:
+  web-server8:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    ports:
+      - "81:80"
+      - "8001:8000"
+    volumes:
+      - "/E/docker/html:/var/www/html" #configure using docker volume desktop app
+    depends_on:
+      - mysql-server
+  mysql-server:
+    image: mysql:5.7.41
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+      #MYSQL_DATABASE: yourdatabase
+      # MYSQL_USER: user
+      # MYSQL_PASSWORD: userpassword
+    volumes:
+      - /E/docker/mysql_data:/var/lib/mysql
+      - /E/docker/custom:/etc/mysql/conf.d
+    ports:
+      - "3307:3306"
+    container_name: mysqlHost
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.1
+    restart: always
+    environment:
+      PMA_HOST: mysql-server
+      PMA_USER: root
+      PMA_PASSWORD: secret
+    ports:
+      - "5000:80"
+volumes:
+  mysql_data:
