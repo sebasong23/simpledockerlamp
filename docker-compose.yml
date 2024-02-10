@@ -17,12 +17,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: secret
-      #MYSQL_DATABASE: yourdatabase
-      # MYSQL_USER: user
-      # MYSQL_PASSWORD: userpassword
-    volumes:
-      - /E/docker/mysql_data:/var/lib/mysql
-      - /E/docker/custom:/etc/mysql/conf.d
+      MYSQL_DATABASE: thisdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: secret
+    # volumes:
+    #   - /E/docker/mysql_data:/var/lib/mysql
+    #   - /E/docker/custom:/etc/mysql/conf.d
     ports:
       - "3307:3306"
     container_name: mysqlHost
@@ -36,5 +36,5 @@ services:
       PMA_PASSWORD: secret
     ports:
       - "5000:80"
-volumes:
-  mysql_data:
+# volumes:
+#   mysql_data:
