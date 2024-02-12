@@ -22,7 +22,7 @@ Installed docker images:
 ## How to use
 1. Install Docker, Start Docker
 
-2. Clone this repository from https://github.com/sebasong23/simpledockerlamp/tree/master in C: 
+2. Clone this repository from  https://github.com/sebasong23/simpledockerlamp.git in C: 
 ```
 git clone https://github.com/sebasong23/simpledockerlamp.git c:/docker
 ```
