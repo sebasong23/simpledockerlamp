@@ -5,6 +5,8 @@ I need a quick way to setup a LAMP and run laravel.
 Configuration and files all set in C:/docker folder
 
 Requirements:
+- Windows 10 or 11
+- Git
 - Docker
 - C:\Docker folder
 - Html in C:\Docker\html
