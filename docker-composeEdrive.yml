@@ -6,10 +6,10 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "80:80"
-      - "8000:8000"
+      - "81:80"
+      - "8001:8000"
     volumes:
-      - "/C/docker/html:/var/www/html" #configure using docker volume desktop app
+      - "/E/docker/html:/var/www/html" #configure using docker volume desktop app
     depends_on:
       - mysql-server
   mysql-server:
