@@ -24,7 +24,7 @@ services:
     #   - /E/docker/mysql_data:/var/lib/mysql
     #   - /E/docker/custom:/etc/mysql/conf.d
     ports:
-      - "3307:3306"
+      - "3306:3306"
     container_name: mysqlHost
 
   phpmyadmin:

@@ -14,6 +14,9 @@ Ports:
 - 5000: phpmyadmin
 - 8000: laravel
   
+Installed docker images:
+- 8.1.27-apache
+- mysql:5.7.41
 
 
 ## How to use
@@ -122,5 +125,14 @@ For example to change port 80 to 81, or 8000 to 8001
       - "81:80"
       - "8001:8000"
 
+If your change the Dockerfile, you need to rebuild the image by running the following command:
+``` 
+docker-compose -f docker-compose.yml up --build
+``` 
+or
+
+```
+runbuild.bat
+```
 
 Happy Laravelling!
