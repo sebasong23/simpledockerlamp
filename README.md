@@ -1,4 +1,4 @@
-# simpledockerlamp (LAMP with Laravel Support)
+# simpledockerlamp (LAMP with Laravel) for Windows 10 or 11
 
 This is a simple docker-compose file to create a LAMP stack with Laravel Support in Windows. It uses the official images for Apache, MySQL and PHP.
 I need a quick way to setup a LAMP and run laravel.
@@ -41,6 +41,7 @@ git clone https://github.com/sebasong23/simpledockerlamp.git c:/docker
  ```
 
  Will download lamp docker required files
+ 
 4. Test application working by 
     - Open browser and type http://localhost
     - You should see working html
