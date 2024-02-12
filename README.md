@@ -24,7 +24,7 @@ Installed docker images:
 
 2. Clone this repository from https://github.com/sebasong23/simpledockerlamp/tree/master in C: 
 ```
-git clone docker-compose -f docker-compose.yml up docker   
+git clone https://github.com/sebasong23/simpledockerlamp.git c:/docker
 ```
 #preferable to use c:/docker folder
 3. CD to folder and 
