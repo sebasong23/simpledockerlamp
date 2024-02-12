@@ -1,6 +1,6 @@
-# simpledockerlamp
+# simpledockerlamp (LAMP with Laravel Support)
 
-This is a simple docker-compose file to create a LAMP stack with Laravel Support. It uses the official images for Apache, MySQL and PHP.
+This is a simple docker-compose file to create a LAMP stack with Laravel Support in Windows. It uses the official images for Apache, MySQL and PHP.
 I need a quick way to setup a LAMP and run laravel.
 Configuration and files all set in C:/docker folder
 
@@ -11,15 +11,15 @@ Requirements:
 
 Ports:
 - 80: Apache
-- 5000:phpmyadmin
-- 8000:laravel
+- 5000: phpmyadmin
+- 8000: laravel
   
 
 
 ## How to use
 1. Install Docker, Start Docker
 
-2. Clone this repository from https://github.com/sebasong23/simpledockerlamp/tree/master
+2. Clone this repository from https://github.com/sebasong23/simpledockerlamp/tree/master in C: 
 ```
 git clone docker-compose -f docker-compose.yml up docker   
 ```
@@ -70,9 +70,10 @@ sudo mv composer.phar /usr/local/bin/composer
    composer --version
 ```
 
-9. Install laravel by running the following command:
+9. Install laravel in you html public folder by running the following command:
 
 ```
+cd /var/www/html
 composer create-project laravel/laravel mylaravel
 ```
 
@@ -84,7 +85,9 @@ composer create-project laravel/laravel mylaravel
 11. Test the laravel application by running the following command:
     ```
     php artisan serve --host=0.0.0.0
-    ```  (without 0.0.0.0 it will not work)
+    ```  
+    
+    (without 0.0.0.0 it will not work)
 
 12. Open browser and type http://localhost:8000
     You should see laravel welcome page
@@ -106,3 +109,18 @@ composer create-project laravel/laravel mylaravel
 15. All good, you can now start developing your laravel application.
 
 16. To stop the containers, run Ctrl C on the terminal where you ran the docker-compose up command or run.bat command.
+
+Tested work well in Windows 11.
+Official git repo is in https://github.com/sebasong23/simpledockerlamp
+
+
+### Configuration
+
+docker-compose yml contain port configuration 
+For example to change port 80 to 81, or 8000 to 8001
+ ports:
+      - "81:80"
+      - "8001:8000"
+
+
+Happy Laravelling!
